@@ -17,7 +17,9 @@ class VideoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        titleLbl.text = partyRock.videoTitle
+        webView.loadHTMLString(partyRock.videoURL, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {
