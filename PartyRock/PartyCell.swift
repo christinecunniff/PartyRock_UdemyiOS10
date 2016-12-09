@@ -9,16 +9,22 @@ class PartyCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func updateUI(partyRock: PartyRock) {
         videoTitleLbl.text = partyRock.videoTitle
-        //TODO: set image from URL
+        
+        let url = URL(string: partyRock.imageURL)!
+        
+        DispatchQueue.main.async {
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.videoPreviewImage.image = UIImage(data: data)
+                }
+            } catch let err as NSError {
+                print(err)
+            }
+        }
     }
 
 }
