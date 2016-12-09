@@ -15,5 +15,10 @@ class PartyCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func updateUI(partyRock: PartyRock) {
+        videoTitleLbl.text = partyRock.videoTitle
+        //TODO: set image from URL
+    }
 
 }
