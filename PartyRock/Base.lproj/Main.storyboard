@@ -155,14 +155,29 @@
                                     <constraint firstAttribute="height" constant="219" id="BHm-dP-wFT"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-Wx-aUp">
+                                <rect key="frame" x="21" y="269" width="343" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="GL7-V2-oXT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="gsW-Wx-aUp" firstAttribute="top" secondItem="R0x-5A-UZ7" secondAttribute="bottom" constant="50" id="4sk-ib-0WS"/>
+                            <constraint firstItem="gsW-Wx-aUp" firstAttribute="trailing" secondItem="W96-TJ-6ev" secondAttribute="trailingMargin" constant="5" id="66o-eN-0HG"/>
                             <constraint firstAttribute="trailing" secondItem="R0x-5A-UZ7" secondAttribute="trailing" id="DHw-wT-X83"/>
                             <constraint firstItem="R0x-5A-UZ7" firstAttribute="top" secondItem="W96-TJ-6ev" secondAttribute="top" id="Lew-L2-Yra"/>
                             <constraint firstItem="R0x-5A-UZ7" firstAttribute="leading" secondItem="W96-TJ-6ev" secondAttribute="leading" id="RO8-sO-Ctb"/>
+                            <constraint firstItem="gsW-Wx-aUp" firstAttribute="leading" secondItem="W96-TJ-6ev" secondAttribute="leadingMargin" constant="5" id="u8P-hd-8Uh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="gsW-Wx-aUp" id="98S-nM-8t1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uky-fn-hPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
